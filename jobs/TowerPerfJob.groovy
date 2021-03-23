@@ -5,7 +5,7 @@ pipelineJob("TowerPerf") {
 
     parameters {
         choiceParam('INVENTORY_FILE', ['conf/inventory-2020-10-14.ini', 'conf/inventory-2020-10-07.ini', 'conf/inventory-gprfc009.ini', 'conf/inventory-gprfc005.ini', 'conf/inventory-gprfc001.ini', 'conf/inventory-cluster.ini', 'conf/inventory-gprfc002.ini'], 'Which inventory file to use?')
-        choiceParam('CONFIG_FILE', ['cconf/overrides-2020-10-14.yaml', 'conf/overrides-2020-10-07.yaml', 'conf/overrides-gprfc009.yaml', 'conf/overrides-gprfc005.yaml', 'conf/overrides-gprfc001.yaml', 'conf/overrides-cluster.yaml', 'conf/overrides-gprfc002.yaml'], 'Which additional config file to use?')
+        choiceParam('CONFIG_FILE', ['conf/overrides-2020-10-14.yaml', 'conf/overrides-2020-10-07.yaml', 'conf/overrides-gprfc009.yaml', 'conf/overrides-gprfc005.yaml', 'conf/overrides-gprfc001.yaml', 'conf/overrides-cluster.yaml', 'conf/overrides-gprfc002.yaml'], 'Which additional config file to use?')
         textParam('EXPERIMENT_PARAMS', 'EXTRA_SETUP_PARAMS: \'-e gpgcheck=1\'', 'Additional config script YAML')
         booleanParam('RUN_CLEANUP_VMS', true, 'Should we run cleanup VMs stage?')
         booleanParam('RUN_RECREATE_VMS', true, 'Should we run recreate VMs stage?')
